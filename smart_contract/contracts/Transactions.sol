@@ -21,7 +21,7 @@ contract Transactions {
 
     TransferStruct[] transactions;
 
-    function transfer(address payable receiver, uint amount, string memory message, string memory account, string memory keyword) public {
+    function addToBlockchain(address payable receiver, uint amount, string memory message, string memory account, string memory keyword) public {
         transactionCount += 1;
         transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, account, keyword));
 
