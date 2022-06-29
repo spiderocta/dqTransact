@@ -1,6 +1,6 @@
 const main = async () => {
   const Transactions = await hre.ethers.getContractFactory("Transactions");
-  const transactions = await Transactions.deploy({ value: hre.ethers.utils.parseEther("0.001") });
+  const transactions = await Transactions.deploy();
 
   await transactions.deployed();
 
