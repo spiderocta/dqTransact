@@ -41,7 +41,7 @@ const Welcome = () => {
             Send DEQEX <br /> across the world
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Explore the crypto world. Buy and sell cryptocurrencies easily on DEQEX.
+            Explore the crypto world. Buy Assets and Send cryptocurrencies to anyone easily on DEQEX.
           </p>
           {!currentAccount && (
             <button
