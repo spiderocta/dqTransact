@@ -79,6 +79,25 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #021031;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a099ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(29, 16, 91, 0.782);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
