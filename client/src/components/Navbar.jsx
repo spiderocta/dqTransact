@@ -4,25 +4,26 @@ import {AiOutlineClose} from 'react-icons/ai'
 
 import logo from '../../images/logo.png'
 
-const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
+import { Link } from "react-router-dom";
+
+const NavBarItem = ({ title,destination, classprops }) => (
+  <li className={`mx-4 cursor-pointer ${classprops}`}> <Link to={destination}> {title}</Link> </li>
 );
 
 
 const Navbar = () =>{
     const [toggleMenu, setToggleMenu] = React.useState(false);
     return (
-        <nav className="w-full flex md:justify-center justify-between items-center p-4">
+        <nav className="w-full flex md:justify-center justify-between items-center p-3">
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
-                <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+                <Link to="/"><img src={logo} alt="logo" className="w-32 cursor-pointer" /></Link>
             </div>
             <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                {["Market", "Exchange", "DqSwap", "Wallets"].map((item, index) => (
-                <NavBarItem key={item + index} title={item} />
+                {["Home", "", "Services"].map((item, index) => (
+                <NavBarItem key={item + index} destination={item == "Home" ? "/" : item} title={item} />
                 ))}
-                <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-                    Login using mobile wallet
-                </li>
+                    <Link to="transactions"> <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">View Transactions History</li></Link>
+                
             </ul>
             {/* for mobile navigations */}
             <div className="flex relative">
@@ -39,8 +40,8 @@ const Navbar = () =>{
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Market", "Exchange", "DqSwap", "Wallets"].map(
-              (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
+            {["Home", "Transactions", "", "Services"].map(
+              (item, index, destination) =>  <NavBarItem key={item + index} destination={item == "Home" ? "/" : item} title={item} classprops="my-2 text-lg"/>,
             )}
           </ul>
         )}

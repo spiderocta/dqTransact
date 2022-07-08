@@ -6,37 +6,36 @@
     box-sizing: border-box;
 }
 
+.hg {
+    height: 100vh;
+}
+
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #160334e0;
+        background-image:
+            radial-gradient(at 0% 0%, rgb(28, 26, 39) 0, transparent 50%),
+            radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+            radial-gradient(at 100% 0%, rgb(37, 72, 128) 0, transparent 50%);
 }
 
 .gradient-bg-welcome {
-    background-color: #010e2c;
-    background-image:
-        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
-        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
-        radial-gradient(at 100% 0%, rgb(37, 72, 128) 0, transparent 50%);
+    background-color: none
 }
 
 .gradient-bg-services {
-    background-color: #010e2c;
-    background-image:
-        radial-gradient(at 0% 0%, rgb(18, 13, 43) 0, transparent 50%),
-        radial-gradient(at 50% 100%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+    background-color: none
 }
 
 .gradient-bg-transactions {
-    background-color: #010e2c;
-    background-image:
-        radial-gradient(at 0% 100%, rgb(19, 17, 32) 0, transparent 50%),
-        radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+    background-color: none
 }
 
 .gradient-bg-footer {
-    background-color: #0c042e;
+    background-color: #150c3d;
     background-image:
         radial-gradient(at 0% 100%, rgb(12, 4, 50) 0, transparent 53%),
         radial-gradient(at 50% 150%, rgb(57, 49, 142) 0, transparent 50%);

@@ -1,16 +1,19 @@
 import { Navbar, Welcome, Footer, Services, Transactions } from './components'
 
+// Router
+import { Routes, Route } from "react-router";
 const App = () => {
 
   return (
     <div className="min-h-screen">
       <div className='gradient-bg-welcome'>
         <Navbar />
-        <Welcome />
+        <Routes>
+             <Route path="/" element={<Welcome />} />
+             <Route path="transactions" element={<Transactions />} />
+             <Route path="services" element={<Services />} />
+        </Routes>
       </div>
-      <Services />
-      <Transactions />
-      <Footer />
     </div>
   )
 }
