@@ -19,9 +19,10 @@ const Navbar = () =>{
                 <Link to="/"><img src={logo} alt="logo" className="w-32 cursor-pointer" /></Link>
             </div>
             <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                {["Home", "", "Services"].map((item, index) => (
+                {["Home","Services"].map((item, index) => (
                 <NavBarItem key={item + index} destination={item == "Home" ? "/" : item} title={item} />
                 ))}
+                    <a href="https://admirable-mooncake-3f4d77.netlify.app/"> Exchange</a>
                     <Link to="transactions"> <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">View Transactions History</li></Link>
                 
             </ul>
